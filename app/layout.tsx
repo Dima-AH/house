@@ -1,4 +1,5 @@
-import {LocalFonts} from "@/utils/Fonts"
+import { LocalFonts } from "@/utils/Fonts";
+import Layout from "@/layout/Layout";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={LocalFonts.className}>{children}</body>
+      <body className={LocalFonts.className}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
